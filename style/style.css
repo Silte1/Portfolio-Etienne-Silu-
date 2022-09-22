@@ -10,13 +10,17 @@
 }
 
 body {
-    border: 1px solid greenyellow;
     font-size: 1.6rem;
     color: #30475E;
     background-color: #EEEEEE;
     width: 100%;
-    height: 1000vh;
-    /* position: relative; */
+    height: 617vh;
+    scroll-behavior: smooth;
+    background-image: url(/scr/images/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    border: 5px solid green;
 }
 
 
@@ -40,7 +44,8 @@ header {
     display: grid;
     grid-template-columns: repeat(10, 10vw);
     grid-template-areas: ". logo . . . . nav nav nav .";
-    background-color: #0F044C;
+    background-color: #787A91;
+    box-shadow: 0 3px 5px #0F044C;
 
 }
 
@@ -70,8 +75,9 @@ header .nav-element {
 
 .nav-element .nav-item a {
     text-decoration: none;
-    color: #787A91;
-    transition: 0.5s;
+    color: #141E61;
+    font-size: 2rem;
+    transition: 500ms;
 }
 
 .nav-element .nav-item a:hover {
@@ -80,21 +86,21 @@ header .nav-element {
 
 /* WELCOME TEXT */
 
+
+
 .welcomeText {
     width: 85%;
-    height: 100vh;
-    color: #EEEEEE;
-    /* background-color: #EEEEEE; */
-    background-image: url(/scr/images/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0 auto;
+    height: 45vh;
+    color: #0F044C;
+    background-color: #EEEEEE;
+    margin: 20vh auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* position: fixed; */
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px #141E61;
+
 }
 
 .welcomeText p,
@@ -102,43 +108,61 @@ h1 {
     text-align: center;
 }
 
+.welcomeText h1 {
+    font-size: 5rem;
+}
+
 .welcomeText .text {
-    position: fixed;
+    line-height: 2;
+    font-size: 2rem;
 }
 
 /* MAIN */
 
 main {
     width: 85vw;
-    height: fit-content;
+    height: 537vh;
     margin: 0 auto;
-    /* padding-top: 100vh; */
-    background-color: #EEEEEE;
+    scroll-behavior: smooth;
+    border: 5px solid aqua;
+    position: relative;
 }
 
 /* ABOUT CONTAINER */
 
+#aboutwrapper {
+    width: 100%;
+    height: 121vh;
+    padding-top: 20vh;
+    /* border: 5px solid yellow; */
+
+}
+
 #aboutContainer {
     width: 100%;
     height: 100vh;
-    padding: 0 3rem;
+    padding: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     background-color: #EEEEEE;
-
-
+    border-radius: 7px;
 }
 
 #aboutContainer .photo {
     border: 2px solid #0F044C;
     width: 30%;
     height: 70%;
+    border-radius: 8px;
+    background-image: url(/scr/images/IMG_20210612_065650.jpg);
+    background-size: cover;
+    background-position: right;
+    box-shadow: -3px 4px 5px #141E61;
 }
 
 #aboutContainer .aboutText {
-    border: 2px solid #0F044C;
+    /* border: 2px solid #0F044C; */
     width: 65%;
     height: 30%;
     display: flex;
@@ -156,6 +180,27 @@ main {
     bottom: 5rem;
 }
 
+.aboutText p:nth-of-type(1) {
+    line-height: 1.5;
+}
+
+.aboutText p:nth-of-type(2) a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #EEEEEE;
+    background-color: #141E61;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-size: 2rem;
+    transition: 500ms;
+}
+
+.aboutText p:nth-of-type(2) a:hover {
+    background-color: #787A91;
+}
+
 #aboutContainer .preview-btn a {
     text-decoration: none;
     font-size: 2rem;
@@ -163,47 +208,139 @@ main {
 }
 
 
-/* SKILLS CONTAINER */
+/* RESUME CONTAINER */
 
-#skillsContainer {
+#resumewrapper {
     width: 100%;
-    height: 100vh;
-    padding: 8rem 3rem 3rem 3rem;
-    margin: 10rem 0;
+    height: 181vh;
+    padding-top: 20vh;
+    /* border: 5px solid green; */
+
+}
+
+#resumeContainer {
+    width: 100%;
+    height: 150vh;
     background-color: #EEEEEE;
-    /* border: 2px solid blue; */
+    display: grid;
+    color: #0F044C;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: 3rem 30rem 1fr 25vh;
+    grid-template-areas: "asideleft spacing spacing spacing spacing spacing spacing asideright"
+        "asideleft topLeft topLeft topLeft topRight topRight topRight asideright"
+        "asideleft now now now now now now asideright"
+        "asideleft bottomLeft bottomLeft bottomCenter bottomCenter bottomRight bottomRight asideright";
+    row-gap: 5rem;
+    column-gap: 7rem;
+    padding-bottom: 3rem;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+}
+
+#resumeContainer .resumeSectionOne {
+    grid-area: topLeft;
+}
+
+#resumeContainer .resumeSectionTwo {
+    grid-area: topRight;
+}
+
+#resumeContainer .resumeSectionThree {
+    grid-area: now;
+}
+
+#resumeContainer .resumeSectionFour {
+    grid-area: bottomLeft;
+}
+
+#resumeContainer .resumeSectionFive {
+    grid-area: bottomCenter;
+}
+
+#resumeContainer .resumeSectionSix {
+    grid-area: bottomRight;
 }
 
 
-#skillsContainer section {
+#resumewrapper h2 {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: title;
+    color: #EEEEEE;
+    background-color: #787A91;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    border-left: 3px solid #EEEEEE;
+    border-right: 3px solid #141E61;
+
+}
+
+
+#resumeContainer section {
+    padding: 1rem 0;
+    box-shadow: 2px 2px 5px black;
+    background-color: #EEEEEE;
+}
+
+#resumeContainer h3 {
     width: 100%;
-    height: 30vh;
-}
-
-#skillsContainer h3 {
-    width: 95%;
     padding: 0.5rem 0;
     background-color: #141E61;
     color: #EEEEEE;
+    text-indent: 4px;
+    margin-bottom: 1rem;
+}
+
+#resumeContainer p {
+    text-indent: 5rem;
 }
 
 
 /* PROJECT CONTAINER */
 
-#projectContainer {
+#projectwrapper {
+    /* border: 5px solid red;
+    width: 100%; */
+    height: 115vh;
+    padding-top: 20vh;
+}
+
+#projectwrapper h2 {
     width: 100%;
-    height: 100vh;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEEEEE;
+    background-color: #787A91;
+    border-top-right-radius: 10rem;
+    border-top-left-radius: 10rem;
+    border-right: 3px solid #EEEEEE;
+    border-left: 3px solid #141E61;
+
+}
+
+#projectContainer {
+    background-color: #EEEEEE;
+    border: 1px solid grey;
+    width: 100%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: #EEEEEE;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* border: 5px solid red; */
 }
 
 #projectContainer figure {
     /* border: 2px solid blue; */
     width: 30%;
-    height: 50%;
+    height: 70%;
     position: relative;
 }
 
@@ -231,9 +368,16 @@ figcaption span a {
     text-decoration: none;
 }
 
-figcaption span a:hover {}
+
 
 /* CONTACT CONTAINER */
+
+#contactwrapper {
+    width: 100%;
+    height: 120vh;
+    padding-top: 20vh;
+    /* border: 5px solid orange; */
+}
 
 #contactContainer {
     width: 100%;
@@ -244,6 +388,11 @@ figcaption span a:hover {}
     align-items: center;
     gap: 10rem;
     background-color: #EEEEEE;
+}
+
+.finalText {
+    text-align: center;
+    line-height: 2;
 }
 
 #contactContainer form {
@@ -269,9 +418,7 @@ figcaption span a:hover {}
     font-weight: bold;
 }
 
-#contactContainer label {
-    display: block;
-}
+#contactContainer label {}
 
 #contactContainer input {
     width: 100%;
@@ -303,15 +450,60 @@ figcaption span a:hover {}
 }
 
 
+
+
+
+
 /* FOOTER */
 
-footer {
-    /* position: absolute;
-    bottom: 0; */
-    border: 1px solid red;
+.footer {
     width: 100%;
-    height: 25vh;
+    min-height: 20vh;
+    background-image: linear-gradient(to right, #0F044C, #787A91);
+    border-top-right-radius: 12rem;
+    display: flex;
+    justify-content: center;
+    color: #EEEEEE;
+    font-size: small;
+    position: sticky;
+    bottom: 0;
+    /* border: 5px solid orange; */
 }
+
+.footer .row {
+    width: 90%;
+    min-height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+
+.footer li::before {
+    content: ;
+}
+
+
+
+.footer li a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+
+.footer li a:hover {
+    color: #bfa7a7;
+}
+
+
+
+.footer h5 {
+    text-decoration: underline;
+    padding: 1rem 0;
+}
+
+
+
 
 .Colors {
     background-color: #EEEEEE;
