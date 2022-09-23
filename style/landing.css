@@ -21,7 +21,7 @@ body {
 header {
     width: 100vw;
     height: 75%;
-    background-image: linear-gradient(to bottom, #EEEEEE, #787A91);
+    background-image: linear-gradient(to bottom, #787A91, #141E61, #0F044C);
 }
 
 .leadingText {
@@ -67,14 +67,14 @@ main .startButton {
 main .startButton a {
     text-decoration: none;
     color: #EEEEEE;
-    background-color: #152aaf;
+    background-color: #141E61;
     padding: 1rem 2rem;
     border-radius: 5rem;
     font-size: 2rem;
 }
 
 main .startButton a:hover {
-    background-color: #0F044C;
+    background-color: #787A91;
 }
 
 .Colors {

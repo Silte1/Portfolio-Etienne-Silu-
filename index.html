@@ -14,20 +14,24 @@
 
 <body>
     <header id="header">
-        <section class="navContainer">
+        <nav class="navContainer">
             <section class="logo">
                 <p>
-                    My portfolio
+                    Web designer
                 </p>
             </section>
-            <ul class="nav-element">
-                <li class="nav-item"><a href="landing.html">Start</a></li>
-                <li class="nav-item"><a href="#aboutwrapper">About</a></li>
-                <li class="nav-item"><a href="#resumewrapper">Resume</a></li>
-                <li class="nav-item"> <a href="#projectwrapper">Project</a></li>
-                <li class="nav-item"><a href="#contactwrapper">Contact</a></li>
-            </ul>
-        </section>
+            <div class="navListContainer">
+                <a class="Hamburger" href="#menu"><i class="fa-solid fa-bars"></i></a>
+                <ul class="nav-element" id="menu">
+                    <li class="nav-item"><a href="landing.html">Start</a></li>
+                    <li class="nav-item"><a href="#aboutwrapper">About me</a></li>
+                    <li class="nav-item"><a href="#resumewrapper">Resume</a></li>
+                    <li class="nav-item"> <a href="#projectwrapper">Projects</a></li>
+                    <li class="nav-item"><a href="#contactwrapper">Contact</a></li>
+                </ul>
+
+            </div>
+        </nav>
     </header>
 
     <section class="welcomeText">
@@ -49,71 +53,87 @@
 
         <article id="aboutwrapper">
             <section id="aboutContainer">
+                <h2>About Me</h2>
                 <div class="photo">
 
                 </div>
                 <div class="aboutText">
-                    <h2>My name is Etienne</h2>
-                    <p>I am 27 year old and was born in Korhogo. Korhogo is a city of the north of Ivory Cost. I do all
-                        primary, middle and high school years in this city. After my final secondary school examination
-                        I
-                        went at the university Péléforo Gon Coulibaly in the same city.
-                        My flexibility and my strong will to succeed in everything i do, allow me to do successfully
-                        many
-                        different jobs.
-                        In these difference jobs i learn and endure many things who forge me and make unique with
-                        particular
-                        predispositions.
-                        I am living now for 13 months in Germany. This time was sufficient to learn German and to start
-                        doing training as Web and software Developer. where i adapted me
+                    <h3></h3>
+                    <p>My name is Etienne Silué and I was born in Korhogo in 1995. Korhogo is a city in the northern
+                        Ivory Cost, West Africa. I went to school in this city and did a bachelors degree after that.
                     </p>
                     <p>
-                        <a class="iconLetDiscover" href="#ResumeContainer">Let's discover my skills</a>
+                        My strong will to succeed in everything I do and my flexibility, allowed me to successfully do
+                        many different jobs. Through these I endured and learned a lot, which shaped me in a unique way
+                        and helped me develop my sens of work and duty.
+                    </p>
+                    <p>Since August 2021 I live in Germany. These past months were sufficient to improve my German and
+                        to start a training to become a web and software developer. </p>
+                    <p>
+                        <a href="#resumeContainer">Let's discover my skills</a>
                     </p>
                 </div>
-                <div class="preview-btn">
+                <!-- <div class="preview-btn">
                     <a href="#header"><i class="fa-solid fa-circle-arrow-up"></i> back to top</a>
-                </div>
+                </div> -->
             </section>
         </article>
 
         <!-- RESUME CONTAINER -->
 
         <article id="resumewrapper">
-            <h2>My studies and habilities</h2>
+            <div>
+                <h2>Resume</h2>
+            </div>
             <section id="resumeContainer">
                 <section class="resumeSectionOne">
                     <h3>Studies</h3>
-                    <p>
-                    </p>
+
+                    <p>high-school diploma (baccalaureat)</p>
+                    <p>Bachelor degree in animal breeeding</p>
+                    <p>Beginning of professional training to web and software development (DCI) </p>
+
                 </section>
                 <section class="resumeSectionTwo">
                     <h3>Jobs</h3>
-                    <p>
-                    </p>
-                    <p>
-
-                    </p>
-                    <p>
-
-                    </p>
-                    <p>
-
-                    </p>
+                    <p>4 years of private tutoring for high-school students</p>
+                    <p>2 years as a manager and comptable in a textbook distribution company</p>
                 </section>
                 <section class="resumeSectionThree">
-                    <h3>What I am now</h3>
-                    <p>
-                    </p>
+                    <h3>My personal qualifications</h3>
+
+                    <p>I am a User Interface designer with very good knowledge in Html, Css, scss and Bootstrap</p>
+                    <p>I also have basic knowledge on word and excel</p>
+                    <p>I am very curious and love to learn new things.</p>
+                    <p>I appreciate working in a team but also on my own.</p>
+                    <p>I easily adapt to new circumstances.</p>
+                    <p>I am patient and optimistic.</p>
                 </section>
                 <section class="resumeSectionFour">
-                    <h3>Language</h3>
+                    <h3>Language skills</h3>
+
+                    <p>French: native speaker</p>
+                    <p>Senoufo (regionale Sprache): native speaker</p>
+                    <p>Dioula (regionale Sprache): native speaker</p>
+                    <p>German: B2</p>
+                    <p>English: A2.2</p>
+                    <p>Spain: approx. A2.1 (3 years in school) </p>
+
                 </section>
                 <section class="resumeSectionFive">
                     <h3>Hobbies</h3>
+
+                    <p>doing music (playing the trumpet and the piano, singing)</p>
+                    <p>group sports (volleyball, football)</p>
+                    <p>go fishing</p>
+                    <p></p>
+
                 </section>
                 <section class="resumeSectionSix">
-                    <h3>Six</h3>
+                    <h3>Voluntary activities</h3>
+
+                    <p>6 years of membership (partly leadership) in a choir in AEBECI (baptist church in Côte d'Ivoire)
+                    </p>
                 </section>
             </section>
         </article>
@@ -121,26 +141,28 @@
         <!-- PROJECT CONTAINER -->
 
         <article id="projectwrapper">
-            <h2>Some of my works</h2>
-            <section id="projectContainer">
-                <figure>
-                    <div class="projectOne"></div>
-                    <figcaption><span><a href="#">See more</a></span></figcaption>
-                </figure>
-                <figure>
-                    <div class="projectOne"></div>
-                    <figcaption><span> <a href="#">See more</a></span></figcaption>
-                </figure>
-                <figure>
-                    <div class="projectOne"></div>
-                    <figcaption><span><a href="#">See more</a></span></figcaption>
-                </figure>
-            </section>
+            <div>
+                <h2>Projects</h2>
+            </div>
+            <article id="projectContainer">
+                <section>
+
+                </section>
+                <section>
+
+                </section>
+                <section>
+
+                </section>
+            </article>
         </article>
 
         <!-- CONTACT CONTAINER -->
 
         <article id="contactwrapper">
+            <div>
+                <h2>Contact</h2>
+            </div>
             <section id="contactContainer">
                 <div class="finalText">
                     <p>Do you have you the<em> perfect challenge</em> for me?</p>
@@ -152,15 +174,15 @@
                         <legend>Contact me</legend>
                         <div>
                             <label for="lname">Name:</label>
-                            <input type="text" id="lname" name="lname" maxlength="50" placeholder="Etienne Silué">
+                            <input type="text" id="lname" name="lname" maxlength="50" placeholder="your name">
                         </div>
                         <div>
-                            <label for="email"> Email:</label>
-                            <input type="email" id="email" name="email" minlength="5" placeholder="sdsq26@gmail.com">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" minlength="5" placeholder="your email address">
                         </div>
                         <div>
                             <label for="message">Write your message</label>
-                            <textarea name="message" id="message" placeholder="Hello..."></textarea>
+                            <textarea name="message" id="message" placeholder="Hello Etienne, ..."></textarea>
                         </div>
                         <div>
                             <button type="submit" class="sendButton">Send</button>
@@ -172,6 +194,7 @@
         </article>
 
     </main>
+
     <footer class="footer">
         <div class="row">
             <div class="copiright">
@@ -179,7 +202,7 @@
             </div>
             <ul class="col One">
                 <h5>Contact</h5>
-                <ul>
+                <ul class="subUlContact">
                     <li>etiennesilue3@gmail.com</li>
                     <li>+49 152 370 75 286</li>
                     <li>what</li>
@@ -187,7 +210,7 @@
             </ul>
             <ul class="col One">
                 <h5>Important links</h5>
-                <ul>
+                <ul class="subUlLinks">
                     <li><a href="">Dci</a></li>
                     <li><a href="">W3schools</a></li>
                     <li><a href="">colorHunt</a></li>
