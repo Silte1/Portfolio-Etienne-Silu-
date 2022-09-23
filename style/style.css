@@ -535,10 +535,34 @@ fieldset div:nth-of-type(4) {
 }
 
 
+/* ONE */
 
+.row .One:hover .subUlContact {
+    opacity: 1;
+}
+
+.row .One:hover h5 {
+    display: none;
+}
+
+/* TWO */
+
+.row .Two:hover .subUlLinks {
+    opacity: 1;
+}
+
+.row .One:hover h5 {
+    display: none;
+}
+
+
+.row li {
+    list-style-type: none;
+    font-size: smaller;
+}
 
 .footer li a {
-    color: #EEEEEE;
+    color: #0F044C;
     text-decoration: none;
 }
 
@@ -551,9 +575,24 @@ fieldset div:nth-of-type(4) {
 
 .footer h5 {
     text-decoration: underline;
-    /* padding: 1rem 0; */
+    padding: .5rem 0;
+    transition: 500ms;
 }
 
+
+.subUlContact,
+.subUlLinks {
+    display: flex;
+    background-color: #EEEEEE;
+    color: #0F044C;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 4%;
+    opacity: 0;
+    transition: 500ms;
+
+    /* display: none; */
+}
 
 
 
