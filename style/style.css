@@ -14,7 +14,7 @@ body {
     color: #30475E;
     width: 100%;
     /* height: 617vh; */
-    background-image: url(/scr/images/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+    background-image: url(/scr/images/bartek-garbowicz-xJeCLqsBUqc-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -92,7 +92,6 @@ header .nav-element {
     list-style: none;
     padding-right: 1rem;
     margin-bottom: 1rem;
-
 }
 
 .nav-element .nav-item:hover {
@@ -115,6 +114,32 @@ header .nav-element {
     color: #EEEEEE;
 }
 
+/* MEDIA QUERI NAVIGATION */
+
+@media (min-width:576px) and (max-width:992px) {
+    .Hamburger {
+        display: none;
+    }
+
+
+    header .nav-element {
+
+        display: block;
+        width: 50vw;
+        display: flex;
+        justify-content: space-evenly;
+        border: 2px solid greenyellow;
+    }
+
+    .nav-element .nav-item {
+
+        padding: 0;
+        margin: 0;
+    }
+
+
+}
+
 /* WELCOME TEXT */
 
 
@@ -130,7 +155,7 @@ header .nav-element {
     justify-content: center;
     align-items: center;
     border-radius: 7px;
-    box-shadow: 2px 2px 5px #141E61;
+    box-shadow: 2px 2px 10px #EEEEEE;
 
 }
 
@@ -180,7 +205,7 @@ main {
 }
 
 #aboutContainer h2 {
-    height: 7%;
+    height: 4rem;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -193,7 +218,7 @@ main {
 #aboutContainer .photo {
     border: 2px solid #0F044C;
     width: 100%;
-    height: 20rem;
+    height: 50vh;
     border-radius: 8px;
     background-image: url(/scr/images/IMG_20210612_065650.jpg);
     background-size: cover;
@@ -202,16 +227,10 @@ main {
 }
 
 #aboutContainer .aboutText {
-    /* border: 2px solid #0F044C; */
     width: 100%;
-    height: 30%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem; */
-    /* overflow: scroll; */
-    /* font-size: 3rem; */
+    height: 50%;
+    border: 5px solid yellow;
+
 }
 
 
@@ -256,17 +275,27 @@ main {
 
 #resumeContainer {
     width: 100%;
-    height: 180vh;
+    height: 230vh;
     background-color: #EEEEEE;
     display: grid;
     color: #0F044C;
     grid-template-columns: 2% 1fr 1fr 1fr 1fr 1fr 1fr 2%;
-    grid-template-rows: 3% auto auto auto;
+    grid-template-rows: 5px auto auto auto auto auto auto;
     grid-template-areas: "asideleft spacing spacing spacing spacing spacing spacing asideright"
-        "asideleft topLeft topLeft topLeft topRight topRight topRight asideright"
+        "asideleft topLeft topLeft topLeft topLeft topLeft topLeft asideright"
+        "asideleft topRight topRight topRight  topRight topRight topRight asideright"
         "asideleft now now now now now now asideright"
-        "asideleft bottomLeft bottomLeft bottomCenter bottomCenter bottomRight bottomRight asideright";
-    row-gap: 5%;
+        "asideleft bottomLeft bottomLeft bottomLeft bottomLeft bottomLeft bottomLeft asideright"
+        "asideleft bottomCenter bottomCenter bottomCenter bottomCenter bottomCenter bottomCenter asideright"
+        "asideleft bottomRight bottomRight bottomRight bottomRight bottomRight bottomRight asideright";
+
+
+    /* grid-template-rows: 3% auto auto auto;
+        grid-template-areas: "asideleft spacing spacing spacing spacing spacing spacing asideright"
+            "asideleft topLeft topLeft topLeft topRight topRight topRight asideright"
+            "asideleft now now now now now now asideright"
+            "asideleft bottomLeft bottomLeft bottomCenter bottomCenter bottomRight bottomRight asideright"; */
+    row-gap: 2%;
     column-gap: 6%;
     padding-bottom: 3rem;
     border-bottom-left-radius: 7px;
@@ -326,7 +355,7 @@ main {
 }
 
 #resumewrapper h2 {
-    height: 7%;
+    height: 4rem;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -357,6 +386,7 @@ main {
 #resumeContainer p {
     font-size: smaller;
     padding-left: 5px;
+    line-height: 1.5;
 }
 
 
@@ -365,6 +395,8 @@ main {
 #projectwrapper {
     height: 115vh;
     padding-top: 20vh;
+    border: 2px solid rosybrown;
+
 }
 
 #projectwrapper>div {
@@ -375,7 +407,7 @@ main {
 }
 
 #projectwrapper h2 {
-    height: 7%;
+    height: 4rem;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -391,15 +423,17 @@ main {
     width: 100%;
     height: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 5rem 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 #projectContainer section {
-    width: 30%;
+    width: 90%;
     height: 70%;
     border: 2px solid green;
 }
@@ -424,7 +458,7 @@ main {
 }
 
 #contactwrapper h2 {
-    height: 7%;
+    height: 4rem;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -439,9 +473,9 @@ main {
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10rem;
+    padding: 2rem 0;
     background-color: #EEEEEE;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
@@ -449,18 +483,22 @@ main {
 
 .finalText {
     text-align: center;
-    line-height: 2;
+    line-height: 1.5;
+    font-weight: bold;
 }
 
 #contactContainer form {
     width: 25rem;
-    height: 50%;
+    height: 70%;
+    box-shadow: 2px 2px 4px black;
+
     /* border: 1px solid red; */
 }
 
 #contactContainer form fieldset {
     width: 100%;
     height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.244); */
     border-top: 3px solid #0F044C;
     border-bottom: 3px solid #0F044C;
     border-left: none;
@@ -468,6 +506,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-bottom: 1rem;
 }
 
 #contactContainer form fieldset legend {
@@ -475,9 +514,30 @@ main {
     font-weight: bold;
 }
 
-#contactContainer input {
-    width: 18rem;
+#contactContainer form fieldset div:not(fieldset div:last-of-type) {
+    margin: 1rem 0;
 }
+
+#contactContainer input {
+    width: 99%;
+}
+
+#contactContainer label {
+    display: block;
+}
+
+#contactContainer fieldset div:nth-of-type(2) label::before {
+    content: "*";
+    color: red;
+}
+
+
+#contactContainer fieldset div:nth-of-type(3) label::before {
+    content: "*";
+    color: red;
+}
+
+
 
 #contactContainer input:focus,
 #contactContainer textarea:focus {
@@ -485,7 +545,7 @@ main {
 }
 
 #contactContainer textarea {
-    width: 100%;
+    width: 99%;
     height: 10rem;
 }
 
@@ -521,8 +581,8 @@ fieldset div:nth-of-type(4) {
     background-color: #EEEEEE;
     color: #EEEEEE;
     font-size: small;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
 }
 
 .footer .row {
