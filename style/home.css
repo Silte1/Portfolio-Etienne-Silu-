@@ -315,28 +315,6 @@ main {
 
 }
 
-#resumeContainer .resumeSectionTwo {
-    grid-area: studies;
-}
-
-#resumeContainer .resumeSectionTwo p::before {
-    content: "\f518";
-    font-family: fontAwesome;
-    padding-right: 1rem;
-    color: #0F044C;
-}
-
-#resumeContainer .resumeSectionFour {
-    grid-area: jobs;
-}
-
-#resumeContainer .resumeSectionTwo p::before {
-    content: "\f058";
-    font-family: fontAwesome;
-    padding-right: 1rem;
-    color: #0F044C;
-}
-
 #resumeContainer .resumeSectionOne {
     grid-area: Qualifications;
     position: relative;
@@ -349,6 +327,16 @@ main {
     color: #0F044C;
 }
 
+#resumeContainer .resumeSectionTwo {
+    grid-area: studies;
+}
+
+#resumeContainer .resumeSectionTwo p::before {
+    content: "\f518";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+    color: #0F044C;
+}
 
 #resumeContainer .resumeSectionThree {
 
@@ -359,7 +347,17 @@ main {
     content: "\f058";
     font-family: fontAwesome;
     padding-right: 1rem;
+}
 
+#resumeContainer .resumeSectionFour {
+    grid-area: jobs;
+}
+
+#resumeContainer .resumeSectionFour p::before {
+    content: "\f058";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+    color: #0F044C;
 }
 
 
@@ -480,32 +478,21 @@ main {
     /* border: 2px solid #0F044C; */
 }
 
-#aboutContainer .photo {
+#aboutContainer img {
     border: 2px solid #0F044C;
-    width: 20rem;
-    height: 20rem;
+
+    width: 30%;
+    height: 30%;
     border-radius: 50%;
     margin: 0 auto;
-    /* background-image: url(/scr/images/IMG_chéri.png);
-    background-size: cover;
-    background-position: center; */
     box-shadow: 2px 2px 5px black;
 }
 
-#aboutContainer .photo img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
 
-}
-
-
-@media (min-width: 576px) {
-    #aboutContainer .photo {
-
-        width: 30rem;
-        height: 30rem;
-
+@media (max-width: 576px) {
+    #aboutContainer img {
+        width: 60%;
+        height: 60%;
     }
 }
 
@@ -519,14 +506,10 @@ main {
 }
 
 
-
-
-
 .aboutText p {
     text-indent: 50px;
     line-height: 1.5;
 }
-
 
 
 /* PROJECT CONTAINER */

@@ -48,6 +48,14 @@ header {
     color: #EEEEEE;
 }
 
+@media (max-width:576px) {
+    .leadingText h1 {
+
+        font-size: 3rem;
+
+    }
+}
+
 
 /* MAIN */
 main {
