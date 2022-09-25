@@ -14,11 +14,18 @@ body {
     color: #30475E;
     width: 100%;
     /* height: 617vh; */
-    background-image: url(/scr/images/bartek-garbowicz-xJeCLqsBUqc-unsplash.jpg);
+    background-image: url(/scr/images/IMG_8659.JPG);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
+
+@media (min-width:576px) {
+    body {
+        font-size: 1.8rem;
+    }
+}
+
 
 
 /* HEADER */
@@ -62,9 +69,12 @@ body {
 }
 
 #header .navListContainer {
-    width: 20vw;
-    text-align: end;
+    width: 50vw;
+    height: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     transition: 500ms;
     /* border: 2px solid greenyellow; */
 }
@@ -72,72 +82,91 @@ body {
 .Hamburger {
     color: #EEEEEE;
     font-size: 3rem;
+    display: none;
 }
 
-.navListContainer:hover .nav-element {
-    display: block;
-}
 
 header .nav-element {
-    background-color: #141e6152;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #787A91;
-    display: none;
-    transition: 500ms;
-    position: absolute;
-    right: 0;
     /* border: 2px solid greenyellow; */
 }
 
 .nav-element .nav-item {
     list-style: none;
-    padding-right: 1rem;
-    margin-bottom: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-element .nav-item:hover {
-    background-color: #141E61;
-}
 
 .nav-element .nav-item a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
-    color: #0F044C;
+    color: #EEEEEE;
+    font-size: large;
     font-weight: bold;
-    font-size: smaller;
     transition: 500ms;
 
 }
 
 .nav-element .nav-item a:hover {
-    color: #EEEEEE;
+    color: #141E61;
+
 }
 
 /* MEDIA QUERI NAVIGATION */
 
-@media (min-width:576px) and (max-width:992px) {
+@media (max-width:992px) {
     .Hamburger {
-        display: none;
+        display: block;
     }
 
+    .navListContainer:hover .nav-element {
+        display: block;
+
+    }
 
     header .nav-element {
+        height: 14rem;
+        width: 14rem;
+        background-color: #141E61;
+        display: none;
+        transition: 500ms;
+        position: absolute;
+        border-radius: 5%;
+        right: 6%;
+        top: 65%;
 
-        display: block;
-        width: 50vw;
-        display: flex;
-        justify-content: space-evenly;
-        border: 2px solid greenyellow;
     }
 
     .nav-element .nav-item {
-
-        padding: 0;
-        margin: 0;
+        list-style: none;
+        transition: 500ms;
     }
 
+    .nav-element .nav-item:hover {
+        background-color: #EEEEEE;
+    }
 
+    .nav-element .nav-item a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #787A91;
+        font-size: smaller;
+        transition: 500ms;
+        padding: 0.5rem 0;
+        padding-left: 1rem;
+    }
+
+    .nav-element .nav-item a:hover {
+        color: #0F044C;
+        font-weight: bold;
+        transform: translateX(2rem);
+    }
 }
 
 /* WELCOME TEXT */
@@ -150,6 +179,7 @@ header .nav-element {
     color: #0F044C;
     background-color: #EEEEEE;
     margin: 20vh auto 0;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,6 +202,29 @@ h1 {
     line-height: 1.5;
 }
 
+.text p:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    /* border: 2px solid red; */
+}
+
+.text p:nth-of-type(2) a {
+    text-align: center;
+    text-decoration: none;
+    color: #EEEEEE;
+    background-color: #141E61;
+    border-radius: 5rem;
+    transition: 500ms;
+    padding: 1rem;
+    /* border: 2px solid red; */
+}
+
+.text p:nth-of-type(2) a:hover {
+    background-color: #787A91;
+}
+
 /* MAIN */
 
 main {
@@ -183,6 +236,218 @@ main {
     position: relative;
     /* background-color: rgba(0, 0, 0, .5); */
 }
+
+
+
+
+
+/* RESUME CONTAINER */
+
+#resumewrapper {
+    width: 100%;
+    min-height: 180vh;
+    padding-top: 20vh;
+    /* border: 5px solid green; */
+}
+
+#resumeContainer {
+    width: 100%;
+    height: 190vh;
+    background-color: #EEEEEE;
+    display: grid;
+    color: #0F044C;
+    grid-template-columns: 2% 1fr 1fr 1fr 1fr 1fr 1fr 2%;
+    grid-template-rows: minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto);
+    grid-template-areas:
+        "asideleft Qualifications Qualifications Qualifications Qualifications Qualifications Qualifications asideright"
+        "asideleft studies studies studies studies studies studies asideright"
+        "asideleft language language language language language language asideright"
+        "asideleft jobs jobs jobs  jobs jobs jobs asideright"
+        "asideleft voluntary voluntary voluntary voluntary voluntary voluntary asideright"
+        "asideleft hobbies hobbies hobbies hobbies hobbies hobbies asideright";
+    row-gap: 2%;
+
+    padding: 3rem 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    /* border: 3px solid green; */
+}
+
+@media (min-width:992px) {
+
+    #resumeContainer {
+        grid-template-columns: 2% 1fr 1fr 1fr 1fr 1fr 1fr 2%;
+        grid-template-rows: minmax(1fr, auto) minmax(1fr, auto) minmax(1fr, auto);
+        grid-template-areas:
+            "asideleft Qualifications Qualifications Qualifications Qualifications Qualifications Qualifications asideright"
+            "asideleft studies studies studies language language language asideright"
+            "asideleft jobs jobs voluntary voluntary hobbies hobbies asideright";
+        column-gap: 6%;
+        /* border: 3px solid green; */
+    }
+
+    #resumeContainer .resumeSectionOne {
+        grid-area: Qualifications;
+        position: relative;
+    }
+
+    #resumeContainer .resumeSectionTwo {
+        grid-area: studies;
+    }
+
+    #resumeContainer .resumeSectionThree {
+
+        grid-area: language;
+    }
+
+    #resumeContainer .resumeSectionFour {
+        grid-area: jobs;
+    }
+
+
+    #resumeContainer .resumeSectionFive {
+        grid-area: hobbies;
+    }
+
+    #resumeContainer .resumeSectionSix {
+        grid-area: voluntary;
+    }
+
+}
+
+#resumeContainer .resumeSectionTwo {
+    grid-area: studies;
+}
+
+#resumeContainer .resumeSectionTwo p::before {
+    content: "\f518";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+    color: #0F044C;
+}
+
+#resumeContainer .resumeSectionFour {
+    grid-area: jobs;
+}
+
+#resumeContainer .resumeSectionTwo p::before {
+    content: "\f058";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+    color: #0F044C;
+}
+
+#resumeContainer .resumeSectionOne {
+    grid-area: Qualifications;
+    position: relative;
+}
+
+#resumeContainer .resumeSectionOne p::before {
+    content: "\f005";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+    color: #0F044C;
+}
+
+
+#resumeContainer .resumeSectionThree {
+
+    grid-area: language;
+}
+
+#resumeContainer .resumeSectionThree p::before {
+    content: "\f058";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+
+}
+
+
+#resumeContainer .resumeSectionFive {
+    grid-area: hobbies;
+}
+
+#resumeContainer .resumeSectionFive p::before {
+    content: "\f118";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+}
+
+
+#resumeContainer .resumeSectionSix {
+    grid-area: voluntary;
+}
+
+#resumeContainer .resumeSectionSix p::before {
+    content: "\f055";
+    font-family: fontAwesome;
+    padding-right: 1rem;
+}
+
+#resumewrapper>div {
+    background-color: #EEEEEE;
+    padding-top: 2rem;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#resumewrapper h2 {
+    height: 4rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEEEEE;
+    background-color: #787A91;
+    margin: 0 2rem;
+
+}
+
+
+#resumeContainer section {
+    padding: 1rem 0;
+    box-shadow: 2px 2px 5px black;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+#resumeContainer section {
+    padding: 1rem 0;
+    box-shadow: 2px 2px 5px black;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+#resumeContainer section div:last-of-type {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
+
+#resumeContainer h3 {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #141E61;
+    color: #EEEEEE;
+    font-size: small;
+    text-indent: 4px;
+    margin-bottom: 1rem;
+}
+
+#resumeContainer p {
+    font-size: smaller;
+    padding-left: 5px;
+    line-height: 1.5;
+}
+
 
 /* ABOUT CONTAINER */
 
@@ -217,177 +482,44 @@ main {
 
 #aboutContainer .photo {
     border: 2px solid #0F044C;
-    width: 100%;
-    height: 50vh;
-    border-radius: 8px;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    margin: 0 auto;
     background-image: url(/scr/images/IMG_20210612_065650.jpg);
     background-size: cover;
     background-position: right;
     box-shadow: 2px 2px 5px black;
 }
 
-#aboutContainer .aboutText {
-    width: 100%;
-    height: 50%;
-    border: 5px solid yellow;
 
+@media (min-width: 576px) {
+    #aboutContainer .photo {
+
+        width: 30rem;
+        height: 30rem;
+
+    }
+}
+
+#aboutContainer .aboutText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 50vh;
+    /* border: 5px solid yellow; */
 }
 
 
-.aboutText p:not(p:nth-of-type(4)) {
+
+
+
+.aboutText p {
     text-indent: 50px;
     line-height: 1.5;
 }
 
-.aboutText p:nth-of-type(4) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    /* border: 2px solid red; */
-}
-
-.aboutText p:nth-of-type(4) a {
-    text-align: center;
-    text-decoration: none;
-    color: #EEEEEE;
-    background-color: #141E61;
-    border-radius: 5rem;
-    transition: 500ms;
-    padding: 1rem;
-    /* border: 2px solid red; */
-}
-
-.aboutText p:nth-of-type(2) a:hover {
-    background-color: #787A91;
-}
-
-
-
-/* RESUME CONTAINER */
-
-#resumewrapper {
-    width: 100%;
-    min-height: 180vh;
-    padding-top: 20vh;
-    /* border: 5px solid green; */
-}
-
-#resumeContainer {
-    width: 100%;
-    height: 230vh;
-    background-color: #EEEEEE;
-    display: grid;
-    color: #0F044C;
-    grid-template-columns: 2% 1fr 1fr 1fr 1fr 1fr 1fr 2%;
-    grid-template-rows: 5px auto auto auto auto auto auto;
-    grid-template-areas: "asideleft spacing spacing spacing spacing spacing spacing asideright"
-        "asideleft topLeft topLeft topLeft topLeft topLeft topLeft asideright"
-        "asideleft topRight topRight topRight  topRight topRight topRight asideright"
-        "asideleft now now now now now now asideright"
-        "asideleft bottomLeft bottomLeft bottomLeft bottomLeft bottomLeft bottomLeft asideright"
-        "asideleft bottomCenter bottomCenter bottomCenter bottomCenter bottomCenter bottomCenter asideright"
-        "asideleft bottomRight bottomRight bottomRight bottomRight bottomRight bottomRight asideright";
-
-
-    /* grid-template-rows: 3% auto auto auto;
-        grid-template-areas: "asideleft spacing spacing spacing spacing spacing spacing asideright"
-            "asideleft topLeft topLeft topLeft topRight topRight topRight asideright"
-            "asideleft now now now now now now asideright"
-            "asideleft bottomLeft bottomLeft bottomCenter bottomCenter bottomRight bottomRight asideright"; */
-    row-gap: 2%;
-    column-gap: 6%;
-    padding-bottom: 3rem;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    /* border: 3px solid green; */
-}
-
-#resumeContainer .resumeSectionOne {
-    grid-area: topLeft;
-}
-
-#resumeContainer .resumeSectionTwo {
-    grid-area: topRight;
-}
-
-#resumeContainer .resumeSectionThree {
-    grid-area: now;
-}
-
-#resumeContainer .resumeSectionFour {
-
-    grid-area: bottomLeft;
-}
-
-#resumeContainer .resumeSectionFour p::before {
-    content: "\f058";
-    font-family: fontAwesome;
-    padding-right: 1rem;
-    color: #0F044C;
-}
-
-#resumeContainer .resumeSectionFive p::before {
-    content: "\f118";
-    font-family: fontAwesome;
-    padding-right: 1rem;
-}
-
-#resumeContainer .resumeSectionFive {
-    grid-area: bottomCenter;
-}
-
-#resumeContainer .resumeSectionSix {
-    grid-area: bottomRight;
-}
-
-#resumeContainer .resumeSectionSix p::before {
-    content: "\f055";
-    font-family: fontAwesome;
-    padding-right: 1rem;
-}
-
-#resumewrapper>div {
-    background-color: #EEEEEE;
-    padding-top: 2rem;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-
-#resumewrapper h2 {
-    height: 4rem;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #EEEEEE;
-    background-color: #787A91;
-    margin: 0 2rem;
-
-}
-
-
-#resumeContainer section {
-    padding: 1rem 0;
-    box-shadow: 2px 2px 5px black;
-    background-color: #EEEEEE;
-}
-
-#resumeContainer h3 {
-    width: 100%;
-    padding: 0.5rem 0;
-    background-color: #141E61;
-    color: #EEEEEE;
-    font-size: small;
-    text-indent: 4px;
-    margin-bottom: 1rem;
-}
-
-#resumeContainer p {
-    font-size: smaller;
-    padding-left: 5px;
-    line-height: 1.5;
-}
 
 
 /* PROJECT CONTAINER */
@@ -395,8 +527,7 @@ main {
 #projectwrapper {
     height: 115vh;
     padding-top: 20vh;
-    border: 2px solid rosybrown;
-
+    /* border: 2px solid rosybrown; */
 }
 
 #projectwrapper>div {
@@ -432,8 +563,16 @@ main {
     border-bottom-right-radius: 5px;
 }
 
+@media (min-width:576px) {
+    #projectContainer {
+        flex-direction: row;
+        padding: 0 3rem;
+    }
+
+}
+
 #projectContainer section {
-    width: 90%;
+    width: 25rem;
     height: 70%;
     border: 2px solid green;
 }
@@ -475,7 +614,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 3rem 0;
     background-color: #EEEEEE;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
@@ -485,6 +624,7 @@ main {
     text-align: center;
     line-height: 1.5;
     font-weight: bold;
+    margin: 0 3rem;
 }
 
 #contactContainer form {
@@ -577,7 +717,7 @@ fieldset div:nth-of-type(4) {
 
 .footer {
     width: 100%;
-    height: 15vh;
+    height: 25vh;
     background-color: #EEEEEE;
     color: #EEEEEE;
     font-size: small;
@@ -587,76 +727,76 @@ fieldset div:nth-of-type(4) {
 
 .footer .row {
     background-image: linear-gradient(to left, #787A91, #141E61, #0F044C);
-    border-top-right-radius: 12rem;
+    /* border-top-right-radius: 12rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
-
+    padding: 1rem 0 2rem;
     /* border: 1px solid red; */
 }
 
-
-/* ONE */
-
-.row .One:hover .subUlContact {
-    opacity: 1;
+#footerTopContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
 }
 
-.row .One:hover h5 {
-    display: none;
+#footerTopContent h5 {
+    text-decoration: underline;
+    font-weight: bold;
 }
-
-/* TWO */
-
-.row .Two:hover .subUlLinks {
-    opacity: 1;
-}
-
-.row .One:hover h5 {
-    display: none;
-}
-
 
 .row li {
-    list-style-type: none;
+    list-style-type: disc;
     font-size: smaller;
+    transition: 500ms;
+    margin: 1rem 0;
+
 }
+
+
 
 .footer li a {
-    color: #0F044C;
+    color: #EEEEEE;
     text-decoration: none;
+    transition: 500ms;
 }
 
 
-.footer li a:hover {
+.footer li a:hover,
+.row li:hover {
     color: #bfa7a7;
 }
 
-
-
-.footer h5 {
-    text-decoration: underline;
-    padding: .5rem 0;
-    transition: 500ms;
+.copiright {
+    color: #787A91;
 }
 
-
-.subUlContact,
-.subUlLinks {
+.followUsUl li,
+.subUlContact li {
+    /* display: inline-block; */
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #30475E;
     display: flex;
-    background-color: #EEEEEE;
-    color: #0F044C;
-    width: 100%;
-    justify-content: flex-start;
-    gap: 4%;
-    opacity: 0;
-    transition: 500ms;
-
-    /* display: none; */
+    justify-content: center;
+    align-items: center;
 }
 
 
 
-.Colors {
+@media (min-width:576px) {
+    .footer {
+        font-size: large;
+    }
+}
+
+*/ .Colors {
     background-color: #EEEEEE;
     background-color: #787A91;
     background-color: #0F044C;
