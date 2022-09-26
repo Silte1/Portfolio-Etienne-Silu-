@@ -34,7 +34,6 @@ body {
     position: absolute;
     height: 15vh;
     z-index: 10;
-    /* border: 5px solid red; */
     position: fixed;
     top: 0;
     left: 0;
@@ -522,7 +521,7 @@ main {
 /* PROJECT CONTAINER */
 
 #projectwrapper {
-    min-height: 115vh;
+    min-height: 80vh;
     padding-top: 20vh;
     /* border: 2px solid rosybrown; */
 }
@@ -549,12 +548,12 @@ main {
 #projectContainer {
     background-color: #EEEEEE;
     width: 100%;
-    height: 90%;
+    min-height: 90vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    row-gap: 4rem;
     padding: 2rem 5rem;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -562,30 +561,43 @@ main {
 }
 
 #projectContainer .project {
-    width: 20rem;
-    min-height: 30rem;
-    /* border: 2px solid red; */
-
-}
-
-#projectContainer .project iframe {
-    width: 100%;
-    height: 30rem;
-    margin-bottom: 2rem;
-}
-
-
-#projectContainer .project a {
-    text-decoration: none;
-    padding: 1rem 1rem;
-    color: #EEEEEE;
-    background-color: #141E61;
-
+    width: 23rem;
+    min-height: 35rem;
     border-radius: 5px;
+    box-shadow: 2px 2px 5px #EEEEEE;
 }
 
-#projectContainer .project a:hover {
-    background-color: #787A91;
+@media (min-width:992px) {
+    #projectContainer .centerProject {
+        min-height: 45rem;
+
+    }
+}
+
+#projectContainer .project:hover {
+    opacity: 0.5;
+}
+
+
+#projectContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24rem;
+    min-height: 40rem;
+    text-decoration: none;
+    color: #EEEEEE;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    transition: 500ms;
+}
+
+#projectContainer a:hover {
+    background-color: #30475E;
+    width: 27rem;
+
+    transform: translateY(-1rem);
 }
 
 /* CONTACT CONTAINER */
