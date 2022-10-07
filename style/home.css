@@ -565,6 +565,7 @@ main {
     min-height: 35rem;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #EEEEEE;
+    transition: 500ms;
 }
 
 @media (min-width:992px) {
@@ -575,7 +576,7 @@ main {
 }
 
 #projectContainer .project:hover {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 

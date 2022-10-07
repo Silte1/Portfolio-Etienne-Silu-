@@ -22,6 +22,7 @@ header {
     width: 100vw;
     height: 75%;
     background-image: linear-gradient(to bottom, #787A91, #141E61, #0F044C);
+    position: relative;
 }
 
 .leadingText {
@@ -47,6 +48,81 @@ header {
     line-height: 1.5;
     color: #EEEEEE;
 }
+
+/* 
+.star {
+    width: 10rem;
+    height: 10rem;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(50deg);
+    border-radius: 50%;
+    animation-name: spinn;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+}
+
+
+@keyframes spinn {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}
+
+.subStarOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    background-color: #0F044C;
+    transform: rotate(50deg);
+}
+
+.subStarTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #787A91;
+    transform: rotate(50deg);
+
+}
+
+.subStarThree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: #EEEEEE;
+    transform: rotate(50deg);
+
+}
+
+.subStarThree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #141E61;
+}
+
+.star {
+    
+} */
+
+
 
 @media (max-width:576px) {
     .leadingText h1 {
