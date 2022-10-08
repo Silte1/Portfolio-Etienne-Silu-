@@ -122,13 +122,13 @@ header .nav-element {
         display: block;
     }
 
-    .navListContainer:hover .nav-element {
+    .navListContainer:hover .Hamburger+.nav-element {
         display: block;
 
     }
 
     header .nav-element {
-        height: 14rem;
+        height: fit-content;
         width: 14rem;
         background-color: #141E61;
         display: none;
