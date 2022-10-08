@@ -137,6 +137,7 @@ header .nav-element {
         border-radius: 5%;
         right: 6%;
         top: 65%;
+        padding: 2rem 0;
 
     }
 
@@ -147,6 +148,8 @@ header .nav-element {
 
     .nav-element .nav-item:hover {
         background-color: #EEEEEE;
+
+
     }
 
     .nav-element .nav-item a {
