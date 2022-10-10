@@ -78,38 +78,42 @@ body {
     float: left;
     display: block;
     color: #f2f2f2;
+    font-weight: bold;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: 500ms;
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav a:not(:first-child):hover {
     background-color: #ddd;
+    transform: translateX(2rem);
     color: black;
 }
 
-/* Add an active class to highlight the current page */
-/* .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-} */
+.topnav .icon:hover {
+    color: black;
+}
+
+
+
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
     font-size: 4rem;
+    color: #EEEEEE;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 992 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 992px) {
     .topnav a {
         display: none;
     }
 
     .topnav a.icon {
-        float: right;
         display: block;
     }
 }
@@ -117,13 +121,19 @@ body {
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 992px) {
     .topnav.responsive {
-        position: relative;
+        position: fixed;
+        width: 30vw;
+        height: 100%;
+        background-color: #141E61;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 -5px 0 #30475E;
     }
 
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+    .topnav.responsive .topnav a.icon {
+        align-self: flex-end;
     }
 
     .topnav.responsive a {
