@@ -9,7 +9,9 @@
     <meta name="author" content="Etienne Silué">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/home.css">
-    <script src="https://kit.fontawesome.com/2d54c13c63.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/2d54c13c63.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="nav.js"></script>
     <title>Etienne Silué portfolio</title>
 </head>
 
@@ -21,7 +23,17 @@
                     UX/UI Designer
                 </p>
             </section>
-            <div class="navListContainer">
+            <div class="topnav" id="myTopnav">
+                <a href="index.html">Start</a>
+                <a href="##resumewrapper">Qualifications</a>
+                <a href="#aboutwrapper">About me</a>
+                <a href="#projectwrapper">Projects</a>
+                <a href="#contactwrapper">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <!-- <div class="navListContainer">
                 <a class="Hamburger" href="#menu"> <input type="checkbox" class="checkedBurger"> <i
                         class="fa-solid fa-bars"></i></a>
                 <ul class="nav-element" id="menu">
@@ -35,7 +47,7 @@
                     <li class="nav-item"><a aria-label="Go to the contact form" href="#contactwrapper">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </nav>
     </header>
 
@@ -87,7 +99,7 @@
                     </div>
                     <div>
                         <p>high-school diploma (baccalaureat)</p>
-                        <p>Bachelor's degree in animal breelding</p>
+                        <p>Bachelor's degree in animal breeding</p>
                         <p>Beginning of professional training for web and software development (DCI) </p>
                     </div>
                 </section>
