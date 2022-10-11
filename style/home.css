@@ -93,12 +93,6 @@ body {
     color: black;
 }
 
-.topnav .icon:hover {
-    color: black;
-}
-
-
-
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -122,7 +116,7 @@ body {
 @media screen and (max-width: 992px) {
     .topnav.responsive {
         position: fixed;
-        width: 30vw;
+        width: 40%;
         height: 100%;
         background-color: #141E61;
         top: 0;
