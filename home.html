@@ -9,7 +9,6 @@
     <meta name="author" content="Etienne Silué">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/home.css">
-    <!-- <script src="https://kit.fontawesome.com/2d54c13c63.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="nav.js"></script>
     <title>Etienne Silué portfolio</title>
@@ -23,34 +22,17 @@
                     UX/UI Designer
                 </p>
             </section>
-
-
             <div class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
-                <a href="index.html" onclick="myFunctionA()">Start</a>
-                <a href="#resumewrapper" onclick="myFunctionA()">Qualifications</a>
-                <a href="#aboutwrapper" onclick="myFunctionA()">About me</a>
-                <a href="#projectwrapper" onclick="myFunctionA()">Projects</a>
-                <a href="#contactwrapper" onclick="myFunctionA()">Contact</a>
+                <a href="index.html" onclick="myFunctionA()" aria-label="return to the first page">Start</a>
+                <a href="#resumewrapper" onclick="myFunctionA()"
+                    aria-label="Read about my qualifications">Qualifications</a>
+                <a href="#aboutwrapper" onclick="myFunctionA()" aria-label="Read about me">About me</a>
+                <a href="#projectwrapper" onclick="myFunctionA()" aria-label="Loock at my projects">Projects</a>
+                <a href="#contactwrapper" onclick="myFunctionA()" aria-label="Go to the contact form">Contact</a>
             </div>
-
-            <!-- <div class="navListContainer">
-                <a class="Hamburger" href="#menu"> <input type="checkbox" class="checkedBurger"> <i
-                        class="fa-solid fa-bars"></i></a>
-                <ul class="nav-element" id="menu">
-                    <li class="nav-item"><a aria-label="return to the first page" href="index.html">Start</a>
-                    </li>
-                    <li class="nav-item"><a aria-label="Read about my qualifications"
-                            href="#resumewrapper">Qualifications</a></li>
-                    <li class="nav-item"><a aria-label="Read about me" href="#aboutwrapper">About me</a></li>
-                    <li class="nav-item"> <a aria-label="Loock at my projects" href="#projectwrapper">Projects</a>
-                    </li>
-                    <li class="nav-item"><a aria-label="Go to the contact form" href="#contactwrapper">Contact</a>
-                    </li>
-                </ul>
-            </div> -->
         </nav>
     </header>
 
@@ -88,7 +70,6 @@
                         <p>I am a fullstack developer with experience in UX and UI design. The languages I speak are
                             Html,
                             Css, scss, Bootstrap, </p>
-                        <!-- <p>I also have basic knowledge on word and excel</p> -->
                         <p>I am very curious and love to learn new things.</p>
                         <p>I appreciate working in a team but also on my own.</p>
                         <p>I easily adapt to new circumstances.</p>
