@@ -635,7 +635,6 @@ main {
 #contactContainer form fieldset {
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.244); */
     border-top: 3px solid #0F044C;
     border-bottom: 3px solid #0F044C;
     border-left: none;
@@ -718,13 +717,10 @@ fieldset div:nth-of-type(4) {
     background-color: #EEEEEE;
     color: #EEEEEE;
     font-size: small;
-    /* position: fixed;
-    bottom: 0; */
 }
 
 .footer .row {
     background-image: linear-gradient(to left, #787A91, #141E61, #0F044C);
-    /* border-top-right-radius: 12rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -732,14 +728,12 @@ fieldset div:nth-of-type(4) {
     width: 100%;
     height: 100%;
     padding: 1rem 0 2rem;
-    /* border: 1px solid red; */
 }
 
 #footerTopContent {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    /* border: 1px solid red; */
 }
 
 #footerTopContent h4 {
@@ -775,7 +769,6 @@ fieldset div:nth-of-type(4) {
 
 .followUsUl li,
 .subUlContact li {
-    /* display: inline-block; */
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
